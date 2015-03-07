@@ -1,0 +1,42 @@
+//
+//  Curacao-Prefix.pch
+//  Curacao
+//
+//  Created by Sitanshu Joshi on 3/7/15.
+//  Copyright (c) 2015 Ebiz Intel Solution Pvt Ltd. All rights reserved.
+//
+
+#ifndef Curacao_Curacao_Prefix_pch
+#define Curacao_Curacao_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import "AppDelegate.h"
+#import "Constant.h"
+#import "ConstantStr.h"
+#import "IconDownloader.h"
+#import "FileUtility.h"
+
+// Custom Slider
+#import "CustomSlideViewController.h"
+#import "MenuOptionsViewController.h"
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+
+// RestKit
+#import "Enum.h"
+#import <CoreData/CoreData.h>
+#import <RestKit/RestKit.h>
+#import <RestKit/CoreData.h>
+#import <RestKit/Network/RKObjectManager.h>
+#import <RestKit/ObjectMapping/RKObjectMappingOperationDataSource.h>
+#import <RestKit/RestKit/RestKit.h>
+
+
+
+#endif

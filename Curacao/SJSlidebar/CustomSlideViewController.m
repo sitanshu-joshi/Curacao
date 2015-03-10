@@ -378,15 +378,16 @@ const int FrontViewPositionNone = 0xff;
 }
 
 
-- (void)_initDefaultProperties
-{
+- (void)_initDefaultProperties {
+    
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
     _frontViewPosition = FrontViewPositionLeft;
     _rearViewPosition = FrontViewPositionLeft;
     _rightViewPosition = FrontViewPositionLeft;
-    _rearViewRevealWidth = 280.0f;
+    _rearViewRevealWidth = screenBound.size.width-40.0f;
     _rearViewRevealOverdraw = 40.0f;
     _rearViewRevealDisplacement = 40.0f;
-    _rightViewRevealWidth = 280.0f;
+    _rightViewRevealWidth = screenBound.size.width-40.0f;
     _rightViewRevealOverdraw = 40.0f;
     _rightViewRevealDisplacement = 40.0f;
     _bounceBackOnOverdraw = YES;

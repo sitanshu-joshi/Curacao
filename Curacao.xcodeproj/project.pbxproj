@@ -22,6 +22,9 @@
 		F4D45F1C1AA629C6001FA945 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4D45F1B1AA629C6001FA945 /* Images.xcassets */; };
 		F4D45F1F1AA629C6001FA945 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D45F1D1AA629C6001FA945 /* LaunchScreen.xib */; };
 		F4D45F2B1AA629C6001FA945 /* CuracaoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D45F2A1AA629C6001FA945 /* CuracaoTests.m */; };
+		F4DC9C361AAF536C00D05D74 /* StoreLocatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DC9C351AAF536C00D05D74 /* StoreLocatorViewController.m */; };
+		F4DC9C391AAF618000D05D74 /* CustomerServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DC9C381AAF618000D05D74 /* CustomerServiceViewController.m */; };
+		F4DC9C3C1AAF628A00D05D74 /* FullSiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DC9C3B1AAF628A00D05D74 /* FullSiteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,12 @@
 		F4D45F241AA629C6001FA945 /* CuracaoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuracaoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D45F291AA629C6001FA945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4D45F2A1AA629C6001FA945 /* CuracaoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CuracaoTests.m; sourceTree = "<group>"; };
+		F4DC9C341AAF536C00D05D74 /* StoreLocatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreLocatorViewController.h; sourceTree = "<group>"; };
+		F4DC9C351AAF536C00D05D74 /* StoreLocatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreLocatorViewController.m; sourceTree = "<group>"; };
+		F4DC9C371AAF618000D05D74 /* CustomerServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerServiceViewController.h; sourceTree = "<group>"; };
+		F4DC9C381AAF618000D05D74 /* CustomerServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerServiceViewController.m; sourceTree = "<group>"; };
+		F4DC9C3A1AAF628A00D05D74 /* FullSiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullSiteViewController.h; sourceTree = "<group>"; };
+		F4DC9C3B1AAF628A00D05D74 /* FullSiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullSiteViewController.m; sourceTree = "<group>"; };
 		F995FCCE1100A29E43E9A772 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,6 +124,12 @@
 				F45517831AAB2AF800F6BBF0 /* MenuViewController.m */,
 				F45517851AAB2B0B00F6BBF0 /* HomeViewController.h */,
 				F45517861AAB2B0B00F6BBF0 /* HomeViewController.m */,
+				F4DC9C341AAF536C00D05D74 /* StoreLocatorViewController.h */,
+				F4DC9C351AAF536C00D05D74 /* StoreLocatorViewController.m */,
+				F4DC9C371AAF618000D05D74 /* CustomerServiceViewController.h */,
+				F4DC9C381AAF618000D05D74 /* CustomerServiceViewController.m */,
+				F4DC9C3A1AAF628A00D05D74 /* FullSiteViewController.h */,
+				F4DC9C3B1AAF628A00D05D74 /* FullSiteViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -352,12 +367,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F45517931AAB423E00F6BBF0 /* curacao.xcdatamodeld in Sources */,
+				F4DC9C3C1AAF628A00D05D74 /* FullSiteViewController.m in Sources */,
 				F4D45F171AA629C6001FA945 /* ViewController.m in Sources */,
 				F45517841AAB2AF800F6BBF0 /* MenuViewController.m in Sources */,
 				F45517781AAB269C00F6BBF0 /* MenuOptionsViewController.m in Sources */,
+				F4DC9C391AAF618000D05D74 /* CustomerServiceViewController.m in Sources */,
 				F45517771AAB269C00F6BBF0 /* CustomSlideViewController.m in Sources */,
 				F45517901AAB3DFE00F6BBF0 /* IconDownloader.m in Sources */,
 				F455178F1AAB3DFE00F6BBF0 /* FileUtility.m in Sources */,
+				F4DC9C361AAF536C00D05D74 /* StoreLocatorViewController.m in Sources */,
 				F4D45F141AA629C6001FA945 /* AppDelegate.m in Sources */,
 				F45517871AAB2B0B00F6BBF0 /* HomeViewController.m in Sources */,
 				F4D45F111AA629C6001FA945 /* main.m in Sources */,

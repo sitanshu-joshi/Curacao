@@ -12,8 +12,12 @@
 
 // Segue Identifier
 #define kPush_To_CustomSlider           @"PushToSliderView"
-
+#define kPush_To_Login                  @"pushHomeToLogin"
 
 #define kDD_Images                      @"image_items"
+
+// Login Resource Param
+#define kParam_Login_username           @"username"
+#define kParam_Login_passowrd           @"password"
 
 #endif

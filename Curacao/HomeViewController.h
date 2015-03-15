@@ -14,5 +14,9 @@
 
 
 @property (weak, nonatomic) IBOutlet UIButton *btnMainMenu;
+@property (weak, nonatomic) IBOutlet UIButton *btnMenu;
+
+- (IBAction)btnLogin:(id)sender;
+
 
 @end

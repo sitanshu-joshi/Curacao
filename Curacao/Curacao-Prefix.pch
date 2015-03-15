@@ -37,6 +37,8 @@
 #import <RestKit/ObjectMapping/RKObjectMappingOperationDataSource.h>
 #import <RestKit/RestKit/RestKit.h>
 
+// Mapping Class
+#import "Login.h"
 
 
 #endif

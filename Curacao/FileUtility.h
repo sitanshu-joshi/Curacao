@@ -3,7 +3,7 @@
 //  SportzCal
 //
 //  Created by Sitanshu Joshi on 1/9/14.
-//  Copyright (c) 2014 zymrinc. All rights reserved.
+//  Copyright (c) 2014 Sitanshu Joshi. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

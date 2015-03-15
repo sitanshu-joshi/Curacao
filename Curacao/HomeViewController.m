@@ -13,7 +13,7 @@
 @end
 
 @implementation HomeViewController
-@synthesize btnMainMenu;
+@synthesize btnMainMenu,btnMenu;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,7 +26,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -34,10 +34,10 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 #pragma mark General Methods
 -(void)setupInitUI {
+    
     [btnMainMenu addTarget:self action: @selector(mainMenuBtnClicked) forControlEvents:UIControlEventTouchUpInside];
     self.revealViewController.delegate = self;
 }
@@ -45,4 +45,7 @@
     [self.revealViewController revealToggle:btnMainMenu];
 }
 
+- (IBAction)btnLogin:(id)sender {
+    [self performSegueWithIdentifier:kPush_To_Login sender:self];
+}
 @end

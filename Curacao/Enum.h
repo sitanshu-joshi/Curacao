@@ -9,5 +9,9 @@
 #ifndef Curacao_Enum_h
 #define Curacao_Enum_h
 
+typedef enum {
+    AUTH
+} OPPCodeType;
+
 
 #endif

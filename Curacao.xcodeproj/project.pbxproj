@@ -14,7 +14,9 @@
 		F45517871AAB2B0B00F6BBF0 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45517861AAB2B0B00F6BBF0 /* HomeViewController.m */; };
 		F455178F1AAB3DFE00F6BBF0 /* FileUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F455178C1AAB3DFE00F6BBF0 /* FileUtility.m */; };
 		F45517901AAB3DFE00F6BBF0 /* IconDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F455178D1AAB3DFE00F6BBF0 /* IconDownloader.m */; };
-		F45517931AAB423E00F6BBF0 /* curacao.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F45517911AAB423E00F6BBF0 /* curacao.xcdatamodeld */; };
+		F499EB3A1AB43EF200E7BB72 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F499EB391AB43EF200E7BB72 /* LoginViewController.m */; };
+		F499EB461AB44D4D00E7BB72 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = F499EB451AB44D4D00E7BB72 /* Login.m */; };
+		F499EB491AB44EAA00E7BB72 /* curacao.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F499EB471AB44EAA00E7BB72 /* curacao.xcdatamodeld */; };
 		F4D45F111AA629C6001FA945 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D45F101AA629C6001FA945 /* main.m */; };
 		F4D45F141AA629C6001FA945 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D45F131AA629C6001FA945 /* AppDelegate.m */; };
 		F4D45F171AA629C6001FA945 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D45F161AA629C6001FA945 /* ViewController.m */; };
@@ -56,7 +58,11 @@
 		F455178C1AAB3DFE00F6BBF0 /* FileUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUtility.m; sourceTree = "<group>"; };
 		F455178D1AAB3DFE00F6BBF0 /* IconDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconDownloader.m; sourceTree = "<group>"; };
 		F455178E1AAB3DFE00F6BBF0 /* IconDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconDownloader.h; sourceTree = "<group>"; };
-		F45517921AAB423E00F6BBF0 /* curacao.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = curacao.xcdatamodel; sourceTree = "<group>"; };
+		F499EB381AB43EF200E7BB72 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F499EB391AB43EF200E7BB72 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F499EB441AB44D4D00E7BB72 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
+		F499EB451AB44D4D00E7BB72 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
+		F499EB481AB44EAA00E7BB72 /* curacao.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = curacao.xcdatamodel; sourceTree = "<group>"; };
 		F4D45F0B1AA629C6001FA945 /* Curacao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Curacao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D45F0F1AA629C6001FA945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4D45F101AA629C6001FA945 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -130,6 +136,8 @@
 				F4DC9C381AAF618000D05D74 /* CustomerServiceViewController.m */,
 				F4DC9C3A1AAF628A00D05D74 /* FullSiteViewController.h */,
 				F4DC9C3B1AAF628A00D05D74 /* FullSiteViewController.m */,
+				F499EB381AB43EF200E7BB72 /* LoginViewController.h */,
+				F499EB391AB43EF200E7BB72 /* LoginViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -148,6 +156,8 @@
 		F45517791AAB26E300F6BBF0 /* MappingObjects */ = {
 			isa = PBXGroup;
 			children = (
+				F499EB441AB44D4D00E7BB72 /* Login.h */,
+				F499EB451AB44D4D00E7BB72 /* Login.m */,
 			);
 			name = MappingObjects;
 			sourceTree = "<group>";
@@ -169,7 +179,6 @@
 		F4D45F021AA629C6001FA945 = {
 			isa = PBXGroup;
 			children = (
-				F45517911AAB423E00F6BBF0 /* curacao.xcdatamodeld */,
 				F4D45F0D1AA629C6001FA945 /* Curacao */,
 				F4D45F271AA629C6001FA945 /* CuracaoTests */,
 				F4D45F0C1AA629C6001FA945 /* Products */,
@@ -200,6 +209,7 @@
 				F4D45F1B1AA629C6001FA945 /* Images.xcassets */,
 				F4D45F1D1AA629C6001FA945 /* LaunchScreen.xib */,
 				F4D45F0E1AA629C6001FA945 /* Supporting Files */,
+				F499EB471AB44EAA00E7BB72 /* curacao.xcdatamodeld */,
 			);
 			path = Curacao;
 			sourceTree = "<group>";
@@ -366,7 +376,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F45517931AAB423E00F6BBF0 /* curacao.xcdatamodeld in Sources */,
 				F4DC9C3C1AAF628A00D05D74 /* FullSiteViewController.m in Sources */,
 				F4D45F171AA629C6001FA945 /* ViewController.m in Sources */,
 				F45517841AAB2AF800F6BBF0 /* MenuViewController.m in Sources */,
@@ -376,9 +385,12 @@
 				F45517901AAB3DFE00F6BBF0 /* IconDownloader.m in Sources */,
 				F455178F1AAB3DFE00F6BBF0 /* FileUtility.m in Sources */,
 				F4DC9C361AAF536C00D05D74 /* StoreLocatorViewController.m in Sources */,
+				F499EB491AB44EAA00E7BB72 /* curacao.xcdatamodeld in Sources */,
+				F499EB461AB44D4D00E7BB72 /* Login.m in Sources */,
 				F4D45F141AA629C6001FA945 /* AppDelegate.m in Sources */,
 				F45517871AAB2B0B00F6BBF0 /* HomeViewController.m in Sources */,
 				F4D45F111AA629C6001FA945 /* main.m in Sources */,
+				F499EB3A1AB43EF200E7BB72 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,12 +601,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F45517911AAB423E00F6BBF0 /* curacao.xcdatamodeld */ = {
+		F499EB471AB44EAA00E7BB72 /* curacao.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F45517921AAB423E00F6BBF0 /* curacao.xcdatamodel */,
+				F499EB481AB44EAA00E7BB72 /* curacao.xcdatamodel */,
 			);
-			currentVersion = F45517921AAB423E00F6BBF0 /* curacao.xcdatamodel */;
+			currentVersion = F499EB481AB44EAA00E7BB72 /* curacao.xcdatamodel */;
 			path = curacao.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

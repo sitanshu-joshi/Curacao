@@ -185,23 +185,21 @@ static AppDelegate *appDelegate;
     /*
      Setup Initial RestKit ObjectStore & Manager
      */
+    /*
+     Setup Initial RestKit ObjectStore & Manager
+     */
     rkMOS = [[RKManagedObjectStore alloc] initWithManagedObjectModel:[self managedObjectModel]];
     NSString *path = [RKApplicationDataDirectory() stringByAppendingPathComponent:kDB_Store];
     [rkMOS addSQLitePersistentStoreAtPath:path fromSeedDatabaseAtPath:nil withConfiguration:nil options:@{NSInferMappingModelAutomaticallyOption: @YES,NSMigratePersistentStoresAutomaticallyOption: @YES} error:nil];
     [rkMOS createManagedObjectContexts];
     
-    
-    rkObjectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:kBase_URL]];
-    [rkObjectManager setManagedObjectStore:rkMOS];
-    
     /*
-     City Mapping
+     Login Mapping
      */
-//    rkomForCity = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:kBase_URL]];
-//    [rkomForCity setManagedObjectStore:rkMOS];
-//    [rkomForCity addRequestDescriptor:[RKRequestDescriptor requestDescriptorWithMapping:[[DataForResponse objectMappingForDataResponse:CITY] inverseMapping] objectClass:[DataForResponse class] rootKeyPath:@"data" method:RKRequestMethodGET]];
-//    RKResponseDescriptor *responseDescriptorForCity = [RKResponseDescriptor responseDescriptorWithMapping:[DataForResponse objectMappingForDataResponse:CITY] method:RKRequestMethodGET pathPattern:nil keyPath:@"data" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-//    [rkomForCity addResponseDescriptor:responseDescriptorForCity];
+    rkomForLogin = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:kBase_URL]];
+    [rkomForLogin setManagedObjectStore:rkMOS];
+    [rkomForLogin addRequestDescriptor:[RKRequestDescriptor requestDescriptorWithMapping:[[Login objectMappingForLogin:AUTH] inverseMapping] objectClass:[Login class] rootKeyPath:@"" method:RKRequestMethodGET]];
+    [rkomForLogin addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:[Login objectMappingForLogin:AUTH] method:RKRequestMethodPOST pathPattern:nil keyPath:@"" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
 }
 
 #pragma mark Document Directory

@@ -14,10 +14,12 @@
 
 @implementation HomeViewController
 @synthesize btnMainMenu,btnMenu;
+@synthesize viewForMenu;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     [self setupInitUI];
 }
 
@@ -25,7 +27,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 #pragma mark - Navigation
 
@@ -37,7 +38,10 @@
 
 #pragma mark General Methods
 -(void)setupInitUI {
-    
+    btnMenu.layer.cornerRadius = 18.0;
+    frameForSecondarymenu = viewForMenu.frame;
+    viewForMenu.frame = CGRectMake(frameForSecondarymenu.origin.x, frameForSecondarymenu.origin.y, frameForSecondarymenu.size.width, 0);
+    [viewForMenu setHidden:NO];
     [btnMainMenu addTarget:self action: @selector(mainMenuBtnClicked) forControlEvents:UIControlEventTouchUpInside];
     self.revealViewController.delegate = self;
 }
@@ -47,5 +51,21 @@
 
 - (IBAction)btnLogin:(id)sender {
     [self performSegueWithIdentifier:kPush_To_Login sender:self];
+}
+
+- (IBAction)btnForMenuShowHide:(id)sender {
+    if (viewForMenu.frame.size.height == 0.0) {
+        [self showSecondaryMenu];
+    } else {
+        [self hideSecondaryMenu];
+    }
+}
+
+#pragma mark General Methods
+-(void)showSecondaryMenu {
+    viewForMenu.frame = frameForSecondarymenu;
+}
+-(void)hideSecondaryMenu {
+    viewForMenu.frame = CGRectMake(frameForSecondarymenu.origin.x, frameForSecondarymenu.origin.y, frameForSecondarymenu.size.width, 0.0);
 }
 @end

@@ -16,7 +16,7 @@ static AppDelegate *appDelegate;
 
 @implementation AppDelegate
 @synthesize rkMOS;
-@synthesize rkObjectManager,rkomForGeneralObject,rkomForLogin;
+@synthesize rkObjectManager,rkomForGeneralObject,rkomForLogin,rkomForCategory;
 @synthesize nsManegedObjectContext,managedObjectModel,persistentStoreCoordinator;
 
 
@@ -193,13 +193,25 @@ static AppDelegate *appDelegate;
     [rkMOS addSQLitePersistentStoreAtPath:path fromSeedDatabaseAtPath:nil withConfiguration:nil options:@{NSInferMappingModelAutomaticallyOption: @YES,NSMigratePersistentStoresAutomaticallyOption: @YES} error:nil];
     [rkMOS createManagedObjectContexts];
     
+    rkomForGeneralObject = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:kBase_URL]];
+    [rkomForGeneralObject setManagedObjectStore:rkMOS];
+    
     /*
      Login Mapping
      */
     rkomForLogin = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:kBase_URL]];
     [rkomForLogin setManagedObjectStore:rkMOS];
-    [rkomForLogin addRequestDescriptor:[RKRequestDescriptor requestDescriptorWithMapping:[[Login objectMappingForLogin:AUTH] inverseMapping] objectClass:[Login class] rootKeyPath:@"" method:RKRequestMethodGET]];
+    [rkomForLogin addRequestDescriptor:[RKRequestDescriptor requestDescriptorWithMapping:[[Login objectMappingForLogin:AUTH] inverseMapping] objectClass:[Login class] rootKeyPath:@"" method:RKRequestMethodPOST]];
     [rkomForLogin addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:[Login objectMappingForLogin:AUTH] method:RKRequestMethodPOST pathPattern:nil keyPath:@"" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
+    
+    /*
+     Catergory List
+     */
+    rkomForCategory = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:kBase_URL]];
+    [rkomForCategory setManagedObjectStore:rkMOS];
+    [rkomForCategory addRequestDescriptor:[RKRequestDescriptor requestDescriptorWithMapping:[[Categories objectMappingForCategory:CATEGORY_LIST] inverseMapping] objectClass:[Categories class] rootKeyPath:@"" method:RKRequestMethodPOST]];
+    [rkomForCategory addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:[Categories objectMappingForCategory:CATEGORY_LIST] method:RKRequestMethodPOST pathPattern:nil keyPath:@"" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
+    
 }
 
 #pragma mark Document Directory
@@ -207,6 +219,14 @@ static AppDelegate *appDelegate;
     if(![[FileUtility utility] checkDirectoryExistsAtPath:[[[FileUtility utility] documentDirectoryPath] stringByAppendingPathComponent:kDD_Images] isDirectory:YES]) {
         // Create Document Directory
         [[FileUtility utility] createDirectory:kDD_Images atFilePath:[[FileUtility utility] documentDirectoryPath]];
+    }
+    NSLog(@"%@",[[FileUtility utility] documentDirectoryPath]);
+}
+-(void)getChildrenItems:(NSArray *)arrayOfCat {
+    Categories *cat;
+    for (cat in arrayOfCat) {
+        NSLog(@"%@",cat.name);
+        NSLog(@"%lu",(unsigned long)[cat.children allObjects].count);
     }
 }
 

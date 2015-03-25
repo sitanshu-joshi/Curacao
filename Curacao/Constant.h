@@ -13,7 +13,9 @@
 
 // Resource URL
 #define kResource_Login         @"UserLogin"
+#define kResource_CatergoryList @"CatalogCategoryTree"
 #define kResource_ProductList   @"GetProducts"
+#define kResource_ProductDetail @"GetProduct"
 
 // DB Name
 #define kDB_Store               @"curacao.sqlite"

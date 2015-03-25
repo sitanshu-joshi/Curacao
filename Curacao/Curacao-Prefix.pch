@@ -27,6 +27,8 @@
 #import <Foundation/Foundation.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "IconDownloader.h"
+
 
 // RestKit
 #import "Enum.h"
@@ -39,6 +41,9 @@
 
 // Mapping Class
 #import "Login.h"
+#import "Categories.h"
+#import "Product.h"
 
+#import "ProductListViewController.h"
 
 #endif

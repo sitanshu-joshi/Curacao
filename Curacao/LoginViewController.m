@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "Product.h"
 
 @interface LoginViewController ()
 
@@ -66,10 +67,46 @@
         NSLog(@"%@",login.message);
         NSLog(@"%@",login.nodeAuth);
         
+        [[NSUserDefaults standardUserDefaults] setValue:login.nodeAuth forKey:kNS_UD_Token];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        [self executeCategoryList:login.nodeAuth];
+        
+        
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"%@",error.description);
     }];
 }
+
+-(void)executeProductionList:(NSString *)str {
+    
+}
+
+-(void)executeCategoryList:(NSString *)token {
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    [dict setValue:@"tree" forKey:@"method"];
+    [dict setValue:@"3" forKey:@"parent_id"];
+    
+    [[[AppDelegate appDelegate].rkomForCategory HTTPClient] setDefaultHeader:@"NodeAuth" value:[[NSUserDefaults standardUserDefaults] valueForKey:kNS_UD_Token]];
+    [[AppDelegate appDelegate].rkomForCategory setRequestSerializationMIMEType:RKMIMETypeJSON];
+    [[AppDelegate appDelegate].rkomForCategory postObject:nil path:kResource_CatergoryList parameters:dict success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        NSLog(@"%@",operation.HTTPRequestOperation.responseString);
+        [activity stopAnimating];
+        
+        // Categorylist
+        Categories *cate = [mappingResult.array firstObject];
+        NSArray *array = [cate.children allObjects];
+        
+        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"position" ascending:YES];
+        NSArray *sortedArray = [array sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+        [AppDelegate appDelegate].arrayForCategories = sortedArray;
+        
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        NSLog(@"%@",error.description);
+    }];
+}
+
+
 
 -(void)startAnim {
     [viewForLogin setHidden:NO];

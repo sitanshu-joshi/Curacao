@@ -10,7 +10,9 @@
 #define Curacao_Enum_h
 
 typedef enum {
-    AUTH
+    AUTH,
+    CATEGORY_LIST,
+    CATEGORIES
 } OPPCodeType;
 
 

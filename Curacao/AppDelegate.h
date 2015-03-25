@@ -34,6 +34,11 @@
  */
 @property (nonatomic, strong) RKObjectManager *rkomForLogin;
 @property (nonatomic, strong) RKObjectManager *rkomForGeneralObject;
+@property (nonatomic, strong) RKObjectManager *rkomForCategory;
+
+@property (nonatomic, strong) NSArray *arrayForCategories;
+
+-(void)getChildrenItems:(NSArray *)arrayOfCat;
 
 @end
 

@@ -14,6 +14,9 @@
 		F45517871AAB2B0B00F6BBF0 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45517861AAB2B0B00F6BBF0 /* HomeViewController.m */; };
 		F455178F1AAB3DFE00F6BBF0 /* FileUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F455178C1AAB3DFE00F6BBF0 /* FileUtility.m */; };
 		F45517901AAB3DFE00F6BBF0 /* IconDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F455178D1AAB3DFE00F6BBF0 /* IconDownloader.m */; };
+		F47537A11AC294F400278E67 /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = F47537A01AC294F400278E67 /* Categories.m */; };
+		F47537A41AC2D33300278E67 /* ProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47537A31AC2D33300278E67 /* ProductListViewController.m */; };
+		F477B3EA1AC06DCD001C19A6 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = F477B3E91AC06DCD001C19A6 /* Product.m */; };
 		F499EB3A1AB43EF200E7BB72 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F499EB391AB43EF200E7BB72 /* LoginViewController.m */; };
 		F499EB461AB44D4D00E7BB72 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = F499EB451AB44D4D00E7BB72 /* Login.m */; };
 		F499EB491AB44EAA00E7BB72 /* curacao.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F499EB471AB44EAA00E7BB72 /* curacao.xcdatamodeld */; };
@@ -58,6 +61,12 @@
 		F455178C1AAB3DFE00F6BBF0 /* FileUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUtility.m; sourceTree = "<group>"; };
 		F455178D1AAB3DFE00F6BBF0 /* IconDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconDownloader.m; sourceTree = "<group>"; };
 		F455178E1AAB3DFE00F6BBF0 /* IconDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconDownloader.h; sourceTree = "<group>"; };
+		F475379F1AC294F400278E67 /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		F47537A01AC294F400278E67 /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
+		F47537A21AC2D33300278E67 /* ProductListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductListViewController.h; sourceTree = "<group>"; };
+		F47537A31AC2D33300278E67 /* ProductListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductListViewController.m; sourceTree = "<group>"; };
+		F477B3E81AC06DCD001C19A6 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		F477B3E91AC06DCD001C19A6 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		F499EB381AB43EF200E7BB72 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		F499EB391AB43EF200E7BB72 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F499EB441AB44D4D00E7BB72 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
@@ -138,6 +147,8 @@
 				F4DC9C3B1AAF628A00D05D74 /* FullSiteViewController.m */,
 				F499EB381AB43EF200E7BB72 /* LoginViewController.h */,
 				F499EB391AB43EF200E7BB72 /* LoginViewController.m */,
+				F47537A21AC2D33300278E67 /* ProductListViewController.h */,
+				F47537A31AC2D33300278E67 /* ProductListViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -156,8 +167,12 @@
 		F45517791AAB26E300F6BBF0 /* MappingObjects */ = {
 			isa = PBXGroup;
 			children = (
+				F475379F1AC294F400278E67 /* Categories.h */,
+				F47537A01AC294F400278E67 /* Categories.m */,
 				F499EB441AB44D4D00E7BB72 /* Login.h */,
 				F499EB451AB44D4D00E7BB72 /* Login.m */,
+				F477B3E81AC06DCD001C19A6 /* Product.h */,
+				F477B3E91AC06DCD001C19A6 /* Product.m */,
 			);
 			name = MappingObjects;
 			sourceTree = "<group>";
@@ -379,7 +394,10 @@
 				F4DC9C3C1AAF628A00D05D74 /* FullSiteViewController.m in Sources */,
 				F4D45F171AA629C6001FA945 /* ViewController.m in Sources */,
 				F45517841AAB2AF800F6BBF0 /* MenuViewController.m in Sources */,
+				F477B3EA1AC06DCD001C19A6 /* Product.m in Sources */,
+				F47537A11AC294F400278E67 /* Categories.m in Sources */,
 				F45517781AAB269C00F6BBF0 /* MenuOptionsViewController.m in Sources */,
+				F47537A41AC2D33300278E67 /* ProductListViewController.m in Sources */,
 				F4DC9C391AAF618000D05D74 /* CustomerServiceViewController.m in Sources */,
 				F45517771AAB269C00F6BBF0 /* CustomSlideViewController.m in Sources */,
 				F45517901AAB3DFE00F6BBF0 /* IconDownloader.m in Sources */,
